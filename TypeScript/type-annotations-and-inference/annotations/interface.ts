@@ -10,7 +10,7 @@ const oldCivic = {
   },
 };
 
-const drink = {
+const newDrink = {
   color: "brown",
   carbonated: true,
   sugar: 40,
@@ -24,4 +24,4 @@ const printSummary = (item: Reportable): void => {
 };
 
 printSummary(oldCivic);
-printSummary(drink);
+printSummary(newDrink);

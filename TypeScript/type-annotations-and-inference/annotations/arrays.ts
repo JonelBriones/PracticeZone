@@ -5,9 +5,9 @@ const carsByMake: string[][] = [];
 
 // Help with inference when extracting values
 
-const newCar = carMakers[0];
+const newCars = carMakers[0];
 const myCar = carMakers.pop();
-console.log(newCar);
+console.log(newCars);
 
 const allCars = carMakers.map((car: string): string => {
   return car.toUpperCase();

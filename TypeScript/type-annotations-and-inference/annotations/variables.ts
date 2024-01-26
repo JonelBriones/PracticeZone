@@ -14,14 +14,14 @@ let numbers: number[] = [0, 1, 2];
 let truths: boolean[] = [true, false, true];
 
 // create Classes
-class Car {
+class CarClass {
   id: number;
   make: number;
   brand: string;
 }
 
 //create a new variable by instatiating a new class of Car
-let car: Car = new Car();
+let newCar: CarClass = new CarClass();
 
 // object literal
 let point: { x: number; y: number } = {
