@@ -12,13 +12,15 @@ const PORT = process.env.PORT;
 
 dbConnect();
 
-app.use(
-  express.json(),
-  express.urlencoded({ extended: true }),
-  cors({ credentials: true, origin: "http://localhost:8000" }),
-  cookieParser()
-);
+app.use(express.json(), express.urlencoded({ extended: true }), cookieParser());
 app.use("/api", router);
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:5173",
+    // methods: ["GET", "POST"],
+  })
+);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

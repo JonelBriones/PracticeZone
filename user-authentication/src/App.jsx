@@ -13,16 +13,13 @@ function App() {
 
   const onSubmitRegisterHandler = (e) => {
     e.preventDefault();
-    const { username, password, confirmPassword } = { register };
+    console.log(register);
     axios
-      .post("http://localhost:8000/create", {
-        username,
-        password,
-        confirmPassword,
-      })
+      .post("/api/register", register, { withCredentials: true })
       .then((res) => {
         console.log("Request Sent");
         console.log(res);
+        setRegister(defaultRegisterForm);
       })
       .catch((err) => {
         console.log("Request Error");
