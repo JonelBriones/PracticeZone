@@ -10,3 +10,7 @@ export default defineConfig({
   },
   plugins: [react()],
 });
+
+/* 
+any request to express server, automatically route to 'localhost'
+*/
